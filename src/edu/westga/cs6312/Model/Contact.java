@@ -19,17 +19,13 @@ public class Contact {
 	private static String INVALID_ENTRY = "data entered is invalid";
 	
 	public Contact(String newFirstName, String newLastName, String newEmail, String newAddress, String newCity, String newState, String newZipcode) {
-		try {
-			this.setAddress(newAddress);
-			this.setFirstName(newFirstName);
-			this.setLasttName(newLastName);
-			this.setEmail(newEmail);
-			this.setCity(newCity);
-			this.setState(newState);
-			this.setZipcode(newZipcode);
-		} catch (IllegalArgumentException e) {
-			System.out.println(INVALID_ENTRY);
-		}
+		this.setAddress(newAddress);
+		this.setFirstName(newFirstName);
+		this.setLastName(newLastName);
+		this.setEmail(newEmail);
+		this.setCity(newCity);
+		this.setState(newState);
+		this.setZipcode(newZipcode);
 	}
 	
 	public String getFirstName() {
@@ -62,78 +58,78 @@ public class Contact {
 	
 	public void setFirstName(String otherFirstName) {
 		try {
-			if (otherFirstName.equals(null) || otherFirstName.equals("")) {
+			if (otherFirstName == null || otherFirstName.equals("")) {
 				throw new IllegalArgumentException(INVALID_ENTRY);
 			}
 			this.firstName = otherFirstName;
 		} catch (IllegalArgumentException e) {
-			System.out.println(INVALID_ENTRY);
+			this.firstName = INVALID_ENTRY;
 		}
 	}
 	
-	public void setLasttName(String otherLastName) {
+	public void setLastName(String otherLastName) {
 		try {
-			if (otherLastName.equals(null) || otherLastName.equals("")) {
+			if (otherLastName == null || otherLastName.equals("")) {
 				throw new IllegalArgumentException(INVALID_ENTRY);
 			}
 			this.lastName = otherLastName;
 		} catch (IllegalArgumentException e) {
-			System.out.println(INVALID_ENTRY);
+			this.lastName = INVALID_ENTRY;
 		}
 	}
 	
 	public void setEmail(String otherEmail) {
 		try {
-			if (otherEmail.equals(null) || otherEmail.equals("")) {
+			if (otherEmail == null || otherEmail.equals("")) {
 				throw new IllegalArgumentException(INVALID_ENTRY);
 			}
 			this.email = otherEmail;
 		} catch (IllegalArgumentException e) {
-			System.out.println(INVALID_ENTRY);
+			this.email = INVALID_ENTRY;
 		}
 	}
 	
 	public void setAddress(String otherAddress) {
 		try {
-			if (otherAddress.equals(null) || otherAddress.equals("")) {
+			if (otherAddress == null || otherAddress.equals("")) {
 				throw new IllegalArgumentException(INVALID_ENTRY);
 			}
 			this.address = otherAddress;
 		} catch (IllegalArgumentException e) {
-			System.out.println(INVALID_ENTRY);
+			this.address = INVALID_ENTRY;
 		}
 	}
 	
 	public void setCity(String otherCity) {
 		try {
-			if (otherCity.equals(null) || otherCity.equals("")) {
+			if (otherCity == null || otherCity.equals("")) {
 				throw new IllegalArgumentException(INVALID_ENTRY);
 			}
 			this.city = otherCity;
 		} catch (IllegalArgumentException e) {
-			System.out.println(INVALID_ENTRY);
+			this.city = INVALID_ENTRY;
 		}
 	}
 	
 	public void setState(String otherState) {
 		try {
-			if (otherState.equals(null) || otherState.equals("")) {
+			if (otherState == null || otherState.equals("")) {
 				throw new IllegalArgumentException(INVALID_ENTRY);
 			}
 			this.state = otherState;
 		} catch (IllegalArgumentException e) {
-			System.out.println(INVALID_ENTRY);
+			this.state = INVALID_ENTRY;
 		}
 	}
 	
 	public void setZipcode(String otherZipcode) {
 		try {
-			if (otherZipcode.equals(null) || otherZipcode.equals("")) {
+			if (otherZipcode == null || otherZipcode.equals("")) {
 				throw new IllegalArgumentException(INVALID_ENTRY);
 			}
 			this.zipcode = otherZipcode;
 		} catch (IllegalArgumentException e) {
-			System.out.println(INVALID_ENTRY);
+			this.zipcode = INVALID_ENTRY;
 		}
 	}
 	
